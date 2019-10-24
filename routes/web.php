@@ -18,12 +18,14 @@ Route::get('/', function () {
 });
 Route::view('Home','Home');
 Route::view('about','about');
-Route::view('contact','contact');
-Route::get('courses','CoursesController@index');
-Route::get('courses/create','CoursesController@create');
-Route::post('courses','CoursesController@library');
-Route::get('courses/{course}','CoursesController@show');
-Route::get('courses/{course}/edit','CoursesController@edit');
-Route::patch('courses/{course}','CoursesController@update');
-Route::delete('courses/{course}','CoursesController@destroy');
-
+Route::get('contact','ContactFormController@create');
+Route::post('contact','ContactFormController@store');
+// Route::view('contact','contact');
+// Route::get('courses', 'CoursesController@index');
+// Route::get('courses/create','CoursesController@create');
+// Route::post('courses','CoursesController@library');
+// Route::get('courses/{course}','CoursesController@show');
+// Route::get('courses/{course}/edit','CoursesController@edit');
+// Route::patch('courses/{course}','CoursesController@update');
+// Route::delete('courses/{course}','CoursesController@destroy');
+Route::resource ('courses','CoursesController');

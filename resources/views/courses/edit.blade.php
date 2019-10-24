@@ -13,7 +13,7 @@ Edit Course deatails for{{ $course->name }}
 @method('PATCH')
     @include('courses.form')
 <div class="text-center">
-<button type='submit' class="rounded btn btn-outline-primary" >Save new course</button>
+<button type='submit' class="rounded btn btn-outline-primary">+ Save new course</button>
 </div>
 
 

@@ -9,7 +9,7 @@ Courses
 
 
 <h1 class="text-center">Courses List</h1>
-<a href="courses/create"><button class ="btn btn-outline-primary"> Add New Courses</button></a>
+<a href="courses/create"><button class ="btn btn-outline-primary">+ Add New Courses</button></a>
 
 
 {{-- <div class="row mx-md-n5 ">
@@ -51,9 +51,6 @@ Courses
 </div>
 
 @endsection --}}
-
-
-
 
      @foreach ($courses as $course)
 

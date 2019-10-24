@@ -12,8 +12,8 @@ Add New Customer
 <form action="/courses" method='post' class=" mb-5">
 
     @include('courses.form')
-<div class="text-center">
-<button type='submit' class="rounded btn btn-outline-primary" >add courses</button>
+<div class="ml-3 text-left">
+<button type='submit' class="rounded btn btn-outline-primary" >+Add New</button>
 </div>
 
 

@@ -46,7 +46,7 @@ public function create (){
     return view('courses.create',compact('companies','course'));
 }
 
- public function library(){
+ public function store(){
 
 // long method for validation
 // $data = request()->validate([
@@ -68,7 +68,7 @@ public function create (){
 // $courses->active = request('active');
 // $courses->save();
 
-return redirect('courses');
+return redirect('courses')->with('message', 'Thanks for add new course');
     //  dd(request('input'));
  }
  public function show($course)

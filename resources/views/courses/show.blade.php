@@ -14,15 +14,14 @@
 
 <div class="row">
 <p align="left">
-<a href="/courses/{{$course->id}}/edit"><button class="text-center rounded btn btn-outline-primary col-10 ml-5 mr-4  p-2" >EDIT</button></a>
+<a href="/courses/{{$course->id}}/edit"><button class="text-center rounded btn btn-outline-primary col-10 ml-3 mr-5  p-1" >EDIT</button></a>
 
 <form action="/courses/{{$course->id}}" method="post">
     @method('DELETE')
     @csrf
 
     <p align="right">
-<button class="text-center rounded btn btn-outline-danger col-10 ml-5 mr-1 p-2" type="submit" >DELETE</button>
-</p></p>
+<button class="text-center rounded btn btn-outline-danger col-10 ml-3 mr-4 p-1" type="submit" >DELETE</button>
 </form>
 </div>
 <p><strong>Name: </strong>{{$course->name}}</p>
