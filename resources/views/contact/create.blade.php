@@ -6,9 +6,9 @@ Contact Us
 @section('navbar')
 <h1>Contact Us</h1>
 
-     @if(!session()->has('message'))
-     
-   <form action="/contact" method="POST">
+     {{-- @if(!session()->has('message')) --}}
+
+   <form action="{{route('contact.store')}}" method="POST">
 
     <div class=" mb-4 pl-2 form-group" >
         <label for="name">Name:</label>
@@ -33,5 +33,5 @@ Contact Us
             <button class="text-center rounded btn btn-outline-primary col- ml-1 mr-1 p-2" type="submit" >SEND MESSAGE</button>
 
    </form>
-    @endif
+    {{-- @endif --}}
 @endsection

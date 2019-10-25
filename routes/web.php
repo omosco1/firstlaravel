@@ -16,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::view('Home','Home');
+Route::view('Explore','Explore');
 Route::view('about','about');
-Route::get('contact','ContactFormController@create');
-Route::post('contact','ContactFormController@store');
+Route::get('contact','ContactFormController@create')->name('contact.create');
+Route::post('contact','ContactFormController@store')->name('contact.store');
 // Route::view('contact','contact');
 // Route::get('courses', 'CoursesController@index');
 // Route::get('courses/create','CoursesController@create');
@@ -28,4 +28,9 @@ Route::post('contact','ContactFormController@store');
 // Route::get('courses/{course}/edit','CoursesController@edit');
 // Route::patch('courses/{course}','CoursesController@update');
 // Route::delete('courses/{course}','CoursesController@destroy');
-Route::resource ('courses','CoursesController');
+Route::resource ('courses','CoursesController')->middleware('auth');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
